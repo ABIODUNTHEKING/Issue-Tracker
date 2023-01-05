@@ -8,10 +8,10 @@ function saveIssue(e){
   let issue = {
       id: chance.guid(),
       description: document.getElementById('issue').value,
-      severity: document.getElementById('priority').value,
-      assignedTo: document.getElementById('assigned-to').value,
+      priority: document.getElementById('priority').value,
+      fixer: document.getElementById('assigned-to').value,
       status: 'Open',
-      issuedBy: document.getElementById('issuer').value,
+      user: document.getElementById('issuer').value,
       date: document.getElementById('date').value 
   }
 
@@ -54,7 +54,7 @@ function newIssue(){
                                 '<p><i class="fa-solid fa-business-time"></i> ' + priority + ' '+
                                 '<i class="fa-regular fa-user"></i> ' + fixer + '</p>'+
                                 '<a href="#" class="btn btn-success" onclick="closeIssue(\''+id+'\')">Close</a> '+
-                                '<a href="#" class="btn btn-danger" onclick="deleteIssue(\''+id+'\')">Delete</a>'+
+                                '<a href="#" class="btn btn-danger" onclick="deleteIssue( \''+id+'\')">Delete</a>'+
                                 '</div>';
   }
 
